@@ -83,6 +83,10 @@ header {
     width: 25px;
     height: 25px;
   }
+
+  & nav {
+    display: none;
+  }
 }
 
 main {
@@ -224,7 +228,6 @@ main {
   & .aboutArea .infoCont {
     padding: 32px 20px;
     gap: 32px;
-    flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.5);
 
     & p,
@@ -233,19 +236,43 @@ main {
       color: white;
     }
 
-    & .dataGroup {
-      gap: 48px;
+    & .subCont {
+      gap: 32px;
+      flex-wrap: wrap;
+
+      & .navCont {
+        display: none;
+
+        & ul {
+          gap: 18px;
+
+          & li {
+            font-size: 21px;
+            list-style: none;
+            color: white;
+          }
+        }
+      }
+
+      & .groupCont {
+        gap: 32px;
+        flex-wrap: wrap;
+      }
+
+      & .separador {
+        gap: 12px;
+
+        & .iconsCont {
+          gap: 18px;
+        }
+      }
     }
 
-    & .iconsCont {
-      gap: 18px;
+    & iframe {
+      border: none;
+      width: 100%;
+      height: 300px;
     }
-  }
-
-  & iframe {
-    border: none;
-    width: 100vw;
-    height: 300px;
   }
 }
 
@@ -257,5 +284,154 @@ footer {
   & p {
     margin-right: 20px;
     color: white;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    & .heroArea {
+      margin: 32px 0px 64px 0px;
+      gap: 48px;
+
+      & .cta {
+        justify-content: center;
+      }
+    }
+
+    & .servicesArea {
+      & .cardsCont {
+        & .card {
+          width: 900px;
+          height: 225px;
+
+          & img {
+            width: 50%;
+            height: 100%;
+          }
+
+          & .infoCard {
+            width: 50%;
+            height: 100%;
+            justify-content: center;
+          }
+        }
+
+        & article:nth-child(2) {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    & .aboutArea .infoCont {
+      gap: 48px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  header {
+    height: 90px;
+    padding: 0px 120px;
+    background-color: transparent;
+
+    & img {
+      width: 40px;
+      height: 40px;
+    }
+
+    & svg {
+      display: none;
+    }
+
+    & nav {
+      display: block;
+
+      & ul {
+        gap: 64px;
+        font-size: 18px;
+        list-style: none;
+      }
+    }
+  }
+
+  main {
+    & h2 {
+      padding-left: 100px;
+    }
+
+    & .heroArea {
+      height: 500px;
+      align-items: center;
+      margin: 0px 0px 64px 0px;
+
+      & img {
+        width: 350px;
+      }
+    }
+
+    & .servicesArea {
+      & .cardsCont {
+        padding: 0px 120px;
+        justify-content: space-between;
+
+
+        & .card {
+          width: 300px;
+          height: 405px;
+
+          & img {
+            width: 100%;
+            height: 180px;
+          }
+
+          & .infoCard {
+            width: 100%;
+            height: 225px;
+            padding: 30px;
+            justify-content: center;
+          }
+        }
+
+        & article:nth-child(2) {
+          flex-direction: row;
+        }
+      }
+    }
+
+    & .contactArea form {
+      padding: 32px 120px;
+
+      & input:not([type="button"]) {
+        width: 48%;
+        height: 45px;
+      }
+
+      & input[type="button"] {
+        width: 200px;
+        margin: 0px;
+      }
+    }
+
+    & .aboutArea {
+      & .infoCont {
+        padding: 32px 120px;
+
+        .subCont {
+          justify-content: space-between;
+
+          & .navCont {
+            display: block;
+          }
+
+          & .groupCont {
+            gap: 80px;
+          }
+
+          & iframe {
+            width: 300px;
+          }
+        }
+      }
+    }
   }
 }

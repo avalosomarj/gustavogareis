@@ -6,6 +6,14 @@ export default function Home() {
       <header className="dis-flex ali-cen">
         <img src="gg-logo.png" alt="logo" />
         <FaBars />
+        <nav>
+          <ul className="dis-flex ubuntu-regular">
+            <li>Clientes</li>
+            <li>Servicios</li>
+            <li>Contacto</li>
+            <li>Sobre Nosotros</li>
+          </ul>
+        </nav>
       </header>
 
       <main>
@@ -88,35 +96,47 @@ export default function Home() {
               Desde 2017 nos dedicamos a la venta e instalación de seguridad electrónica
             </p>
 
-            <div className="dataGroup dis-flex">
-              <div className="iconsCont dis-flex flex-dir-col">
-                <h4 className="ubuntu-regular">Área Técnica</h4>
-                <div className="iconsCont dis-flex">
-                  <FaSquareWhatsapp />
-                  <FaSquarePhone />
-                  <FaSquareEnvelope />
+            <div className="subCont dis-flex">
+              <div className="navCont">
+                <ul className="dis-flex flex-dir-col">
+                  <li className="ubuntu-regular">Navegación</li>
+                  <li className="ubuntu-light">Inicio</li>
+                  <li className="ubuntu-light">Clientes</li>
+                  <li className="ubuntu-light">Servicios</li>
+                  <li className="ubuntu-light">Contacto</li>
+                </ul>
+              </div>
+
+              <div className="groupCont dis-flex">
+                <div className="separador dis-flex flex-dir-col">
+                  <h4 className="ubuntu-regular">Área Técnica</h4>
+                  <div className="iconsCont dis-flex">
+                    <FaSquareWhatsapp />
+                    <FaSquarePhone />
+                    <FaSquareEnvelope />
+                  </div>
+                </div>
+
+                <div className="separador dis-flex flex-dir-col">
+                  <h4 className="ubuntu-regular">Área Comercial</h4>
+                  <div className="iconsCont dis-flex">
+                    <FaSquareWhatsapp />
+                    <FaSquarePhone />
+                    <FaSquareEnvelope />
+                  </div>
                 </div>
               </div>
 
-              <div className="iconsCont dis-flex flex-dir-col">
-                <h4 className="ubuntu-regular">Área Comercial</h4>
-                <div className="iconsCont dis-flex">
-                  <FaSquareWhatsapp />
-                  <FaSquarePhone />
-                  <FaSquareEnvelope />
-                </div>
+              <div className="separador dis-flex flex-dir-col">
+                <h4 className="ubuntu-regular">Seguinos</h4>
+                <FaSquareInstagram />
               </div>
-            </div>
 
-            <div className="iconsCont dis-flex flex-dir-col">
-              <h4 className="ubuntu-regular">Seguinos</h4>
-              <FaSquareInstagram />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13595.635844407296!2d-60.0742123!3d-31.5815443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b46551a4e3dc63%3A0xf4ae0a82e0134795!2sGustavo%20Gareis%20-%20Seguridad%20Electr%C3%B3nica.!5e0!3m2!1ses-419!2sar!4v1725284046819!5m2!1ses-419!2sar" loading="lazy" referrerPolicy="no-referrer-when-downgrade">
+              </iframe>
             </div>
           </div>
         </section>
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13595.635844407296!2d-60.0742123!3d-31.5815443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b46551a4e3dc63%3A0xf4ae0a82e0134795!2sGustavo%20Gareis%20-%20Seguridad%20Electr%C3%B3nica.!5e0!3m2!1ses-419!2sar!4v1725284046819!5m2!1ses-419!2sar" loading="lazy" referrerPolicy="no-referrer-when-downgrade">
-        </iframe>
       </main>
 
       <footer className="dis-flex ali-cen">

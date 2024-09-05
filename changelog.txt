@@ -1,1 +1,6 @@
-v 1.0.0 - version inicial
+v 1.0.4
+        + vista mobile+
+        + vista desktop
+
+v 1.0.0
+        ~ version inicial vista mobile
