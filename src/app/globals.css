@@ -61,7 +61,6 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
   scroll-behavior: smooth;
   background-color: rgba(78, 90, 98, 0.35);
 
@@ -70,14 +69,26 @@ body {
     height: 25px;
     color: white;
   }
+
+  & a {
+    text-decoration: none;
+  }
+
+  & h2 {
+    margin: 32px 20px;
+    font-size: 21px;
+    color: black;
+  }
 }
 
 header {
-  background-color: #4E5A62;
+  width: 100%;
   height: 60px;
-  justify-content: space-between;
   padding: 0px 20px;
-
+  position: sticky;
+  top: 0px;
+  justify-content: space-between;
+  background-color: #4E5A62;
 
   & img {
     width: 25px;
@@ -85,19 +96,34 @@ header {
   }
 
   & nav {
-    display: none;
+    position: absolute;
+    top: -100vh;
+    right: 0px;
+
+    & ul {
+      padding: 32px;
+      background-color: #4E5A62;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+
+      & li {
+        list-style: none;
+
+        & a {
+          display: block;
+          text-align: end;
+          width: 115px;
+          color: white;
+        }
+      }
+    }
   }
 }
 
 main {
-  & h2 {
-    margin: 32px 20px;
-    font-size: 21px;
-    color: black;
-  }
-
   & .heroArea {
-    margin-bottom: 64px;
+    margin: 10px 0px 60px 0px;
     justify-content: center;
     flex-wrap: wrap-reverse;
 
@@ -131,16 +157,13 @@ main {
     & .customersBg {
       height: 180px;
       background-color: rgba(255, 255, 255, 0.1);
-      gap: 90px;
+      padding: 0px 20px;
 
-      & img {
-        width: 90px;
-        filter: grayscale(100);
-        transition: filter 0.25s linear;
-
-        &:hover {
-          filter: grayscale(0);
-        }
+      & .slider {
+        width: 100%;
+        height: 90px;
+        background-image: url("/customers.png");
+        animation: slider 10s infinite linear;
       }
     }
   }
@@ -250,6 +273,10 @@ main {
             font-size: 21px;
             list-style: none;
             color: white;
+
+            & a {
+              color: white;
+            }
           }
         }
       }
@@ -284,6 +311,12 @@ footer {
   & p {
     margin-right: 20px;
     color: white;
+  }
+}
+
+@keyframes slider {
+  to {
+    background-position: -720px;
   }
 }
 
@@ -330,6 +363,7 @@ footer {
 
 @media only screen and (min-width: 1280px) {
   header {
+    position: static;
     height: 90px;
     padding: 0px 120px;
     background-color: transparent;
@@ -344,12 +378,28 @@ footer {
     }
 
     & nav {
-      display: block;
+      position: static;
 
       & ul {
+        width: 100%;
+        padding: 0px;
+        flex-direction: row;
         gap: 64px;
         font-size: 18px;
         list-style: none;
+        background-color: transparent;
+
+        & li {
+          & a {
+            text-align: start;
+            width: 100%;
+            color: black;
+          }
+
+          &:first-child {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -366,6 +416,12 @@ footer {
 
       & img {
         width: 350px;
+      }
+    }
+
+    & .customersArea {
+      & .customersBg {
+        padding: 0px 120px;
       }
     }
 

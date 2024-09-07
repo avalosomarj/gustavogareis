@@ -1,39 +1,33 @@
-import { FaBars, FaSquareEnvelope, FaSquareInstagram, FaSquarePhone, FaSquareWhatsapp } from "react-icons/fa6";
+import NavBar from "@/components/NavBar";
+import { FaSquareEnvelope, FaSquareInstagram, FaSquarePhone, FaSquareWhatsapp } from "react-icons/fa6";
 
 export default function Home() {
   return (
     <>
       <header className="dis-flex ali-cen">
-        <img src="gg-logo.png" alt="logo" />
-        <FaBars />
-        <nav>
-          <ul className="dis-flex ubuntu-regular">
-            <li>Clientes</li>
-            <li>Servicios</li>
-            <li>Contacto</li>
-            <li>Sobre Nosotros</li>
-          </ul>
-        </nav>
+        <a href={"#inicio"}><img src="gg-logo.png" alt="logo" /></a>
+        <NavBar />
       </header>
 
       <main>
         <section className="heroArea dis-flex">
           <div className="cta dis-flex">
             <h1 className="ubuntu-medium">Brindamos soluciones<br />en seguridad electrónica<br />para tu empresa, comercio<br />u oficina</h1>
-            <button className="dis-flex jus-cen ali-cen ubuntu-medium"><span>Contactanos</span></button>
+            <button className="dis-flex jus-cen ali-cen ubuntu-medium">
+            <a href={"#contacto"}><span>Contactanos</span></a>
+            </button>
           </div>
           <img src="hero.png" alt="hero" />
         </section>
 
-        <section className="customersArea">
+        <section className="customersArea" id="clientes">
           <h2 className="ubuntu-regular">Confían en nosotros</h2>
-          <div className="customersBg dis-flex jus-cen ali-cen">
-            <img src="c1.png" alt="logo" />
-            <img src="c2.png" alt="logo" />
+          <div className="customersBg dis-flex ali-cen">
+            <div className="slider" />
           </div>
         </section>
 
-        <section className="servicesArea dis-flex flex-dir-col">
+        <section className="servicesArea dis-flex flex-dir-col" id="servicios">
           <h2 className="ubuntu-regular">Nuestros servicios</h2>
 
           <div className="cardsCont dis-flex jus-cen">
@@ -72,7 +66,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="contactArea">
+        <section className="contactArea" id="contacto">
           <h2 className="ubuntu-regular">Contactanos</h2>
 
           <form className="dis-flex" action="">
@@ -88,7 +82,7 @@ export default function Home() {
           </form>
         </section>
 
-        <section className="aboutArea">
+        <section className="aboutArea" id="sobre">
           <h2 className="ubuntu-regular">Sobre nosotros</h2>
 
           <div className="infoCont dis-flex flex-dir-col">
@@ -98,12 +92,12 @@ export default function Home() {
 
             <div className="subCont dis-flex">
               <div className="navCont">
-                <ul className="dis-flex flex-dir-col">
+                <ul className="dis-flex flex-dir-col ubuntu-light">
                   <li className="ubuntu-regular">Navegación</li>
-                  <li className="ubuntu-light">Inicio</li>
-                  <li className="ubuntu-light">Clientes</li>
-                  <li className="ubuntu-light">Servicios</li>
-                  <li className="ubuntu-light">Contacto</li>
+                  <li><a href={"#inicio"}>Inicio</a></li>
+                  <li><a href={"#clientes"}>Clientes</a></li>
+                  <li><a href={"#servicios"}>Servicios</a></li>
+                  <li><a href={"#contacto"}>Contacto</a></li>
                 </ul>
               </div>
 

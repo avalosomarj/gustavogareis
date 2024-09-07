@@ -1,3 +1,7 @@
+v 1.0.7
+        + título y favicon 
+        + navegación
+        + animación logos clientes
 v 1.0.4
         + vista mobile+
         + vista desktop
