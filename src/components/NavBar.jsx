@@ -9,7 +9,7 @@ const NavBar = () => {
   return (
     <div>
       <div onClick={() => setOpenMenu(!openMenu)}>{openMenu ? <FaXmark /> : <FaBars />}</div>
-      <nav style={openMenu ? { top: '60px', transition: 'top 0.25s linear' } : { top: '-100vh', transition: 'top 0.25s linear' }}>
+      <nav style={openMenu ? { top: '60px', transition: 'top 0.5s linear' } : { top: '-100vh', transition: 'top 0.5s linear' }}>
         <ul className="dis-flex ubuntu-regular">
           <li><a href={"#inicio"} onClick={() => setOpenMenu(false)}>Inicio</a></li>
           <li><a href={"#clientes"} onClick={() => setOpenMenu(false)}>Clientes</a></li>

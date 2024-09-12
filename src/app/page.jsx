@@ -1,3 +1,4 @@
+import ContactForm from "@/components/ContactForm";
 import NavBar from "@/components/NavBar";
 import { FaSquareEnvelope, FaSquareInstagram, FaSquarePhone, FaSquareWhatsapp } from "react-icons/fa6";
 
@@ -14,7 +15,7 @@ export default function Home() {
           <div className="cta dis-flex">
             <h1 className="ubuntu-medium">Brindamos soluciones<br />en seguridad electrónica<br />para tu empresa, comercio<br />u oficina</h1>
             <button className="dis-flex jus-cen ali-cen ubuntu-medium">
-            <a href={"#contacto"}><span>Contactanos</span></a>
+              <a href={"#contacto"}><span>Contactanos</span></a>
             </button>
           </div>
           <img src="hero.png" alt="hero" />
@@ -69,24 +70,14 @@ export default function Home() {
         <section className="contactArea" id="contacto">
           <h2 className="ubuntu-regular">Contactanos</h2>
 
-          <form className="dis-flex" action="">
-            <input type="text" placeholder="Nombre y Apellido *" />
-            <input type="text" placeholder="Servicio *" />
-            <input type="text" placeholder="Localidad *" />
-            <input type="text" placeholder="Dirección *" />
-            <input type="tel" placeholder="Teléfono *" />
-            <input type="email" placeholder="E-mail *" />
-            <textarea name="mensaje" placeholder="Mensaje" />
-            <span className="ubuntu-light-italic">* Campos requeridos</span>
-            <input type="button" value="Enviar" className="ubuntu-medium" />
-          </form>
+          <ContactForm />
         </section>
 
         <section className="aboutArea" id="sobre">
           <h2 className="ubuntu-regular">Sobre nosotros</h2>
 
           <div className="infoCont dis-flex flex-dir-col">
-            <p className="ubuntu-regular">
+            <p className="ubuntu-light">
               Desde 2017 nos dedicamos a la venta e instalación de seguridad electrónica
             </p>
 
@@ -105,37 +96,37 @@ export default function Home() {
                 <div className="separador dis-flex flex-dir-col">
                   <h4 className="ubuntu-regular">Área Técnica</h4>
                   <div className="iconsCont dis-flex">
-                    <FaSquareWhatsapp />
-                    <FaSquarePhone />
-                    <FaSquareEnvelope />
-                  </div>
-                </div>
-
-                <div className="separador dis-flex flex-dir-col">
-                  <h4 className="ubuntu-regular">Área Comercial</h4>
-                  <div className="iconsCont dis-flex">
-                    <FaSquareWhatsapp />
-                    <FaSquarePhone />
-                    <FaSquareEnvelope />
-                  </div>
-                </div>
+                    <a href={"https://wa.me/" + process.env.CONTACT_TEC_WSP} target="_blank"><FaSquareWhatsapp /></a>
+                    <a href={"tel:" + process.env.CONTACT_TEC_TEL} target="_blank"><FaSquarePhone /></a>
+                  <a href={"mailto:" + process.env.CONTACT_TEC_MAIL} target="_blank"><FaSquareEnvelope /></a>
               </div>
+            </div>
 
-              <div className="separador dis-flex flex-dir-col">
-                <h4 className="ubuntu-regular">Seguinos</h4>
-                <FaSquareInstagram />
+            <div className="separador dis-flex flex-dir-col">
+              <h4 className="ubuntu-regular">Área Comercial</h4>
+              <div className="iconsCont dis-flex">
+                <a href={"https://wa.me/" + process.env.CONTACT_COM_WSP} target="_blank"><FaSquareWhatsapp /></a>
+                <a href={"tel:" + process.env.CONTACT_COM_TEL} target="_blank"><FaSquarePhone /></a>
+                <a href={"mailto:" + process.env.CONTACT_COM_MAIL} target="_blank"><FaSquareEnvelope /></a>
               </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13595.635844407296!2d-60.0742123!3d-31.5815443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b46551a4e3dc63%3A0xf4ae0a82e0134795!2sGustavo%20Gareis%20-%20Seguridad%20Electr%C3%B3nica.!5e0!3m2!1ses-419!2sar!4v1725284046819!5m2!1ses-419!2sar" loading="lazy" referrerPolicy="no-referrer-when-downgrade">
-              </iframe>
             </div>
           </div>
-        </section>
-      </main>
 
-      <footer className="dis-flex ali-cen">
-        <p className="ubuntu-light">Diseño y Desarrollo por <span className="ff-orb">Ergonomic</span></p>
-      </footer>
+          <div className="separador dis-flex flex-dir-col">
+            <h4 className="ubuntu-regular">Seguinos</h4>
+            <a href={"https://www.instagram.com/" + process.env.CONTACT_GG_IG} target="_blank"><FaSquareInstagram /></a>
+          </div>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13595.635844407296!2d-60.0742123!3d-31.5815443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b46551a4e3dc63%3A0xf4ae0a82e0134795!2sGustavo%20Gareis%20-%20Seguridad%20Electr%C3%B3nica.!5e0!3m2!1ses-419!2sar!4v1725284046819!5m2!1ses-419!2sar" loading="lazy" referrerPolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section >
+      </main >
+
+    <footer className="dis-flex ali-cen">
+      <p className="ubuntu-light">Diseño y Desarrollo por <a href={process.env.ERGONOMIC_URL} target="_blank"><span className="ff-orb">Ergonomic</span></a></p>
+    </footer>
     </>
   );
 }

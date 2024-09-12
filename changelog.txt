@@ -1,7 +1,12 @@
+v 1.1.8
+        + variables de entorno para el contenido dinámico
+        + formulario de contacto (validaciones lado cliente, api para envío de datos con nodemailer desde servidor)
+
 v 1.0.7
-        + título y favicon 
+        + título y favicon
         + navegación
         + animación logos clientes
+
 v 1.0.4
         + vista mobile+
         + vista desktop
