@@ -1,3 +1,7 @@
+v 1.1.9
+        + media query para 1920px
+        + correcciones varias HTML y CSS
+
 v 1.1.8
         + variables de entorno para el contenido dinámico
         + formulario de contacto (validaciones lado cliente, api para envío de datos con nodemailer desde servidor)

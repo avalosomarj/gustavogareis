@@ -7,9 +7,9 @@ const NavBar = () => {
   const [openMenu, setOpenMenu] = useState(false)
 
   return (
-    <div>
-      <div onClick={() => setOpenMenu(!openMenu)}>{openMenu ? <FaXmark /> : <FaBars />}</div>
-      <nav style={openMenu ? { top: '60px', transition: 'top 0.5s linear' } : { top: '-100vh', transition: 'top 0.5s linear' }}>
+    <>
+      <div className="iconMenu" onClick={() => setOpenMenu(!openMenu)}>{openMenu ? <FaXmark /> : <FaBars />}</div>
+      <nav style={{ top: openMenu ? '60px' : '-100vh', transition: 'top 0.5s linear' }}>
         <ul className="dis-flex ubuntu-regular">
           <li><a href={"#inicio"} onClick={() => setOpenMenu(false)}>Inicio</a></li>
           <li><a href={"#clientes"} onClick={() => setOpenMenu(false)}>Clientes</a></li>
@@ -18,7 +18,7 @@ const NavBar = () => {
           <li><a href={"#sobre"} onClick={() => setOpenMenu(false)}>Sobre Nosotros</a></li>
         </ul>
       </nav>
-    </div>
+    </>
   )
 }
 

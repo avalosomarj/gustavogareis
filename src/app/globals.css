@@ -68,6 +68,7 @@ body {
     width: 25px;
     height: 25px;
     color: white;
+    z-index: 3;
   }
 
   & a {
@@ -79,9 +80,8 @@ body {
   }
 
   & h2 {
-    margin: 32px 20px;
-    font-size: 21px;
-    color: black;
+    font-size: 24px;
+    color: white;
   }
 }
 
@@ -93,17 +93,22 @@ header {
   top: 0px;
   justify-content: space-between;
   background-color: #4E5A62;
-  z-index: 1;
+  z-index: 2;
 
   & img {
     width: 25px;
     height: 25px;
   }
 
+  & .iconMenu {
+    z-index: 3;
+  }
+
   & nav {
     position: absolute;
     top: -100vh;
     right: 0px;
+    z-index: 1;
 
     & ul {
       padding: 32px;
@@ -128,7 +133,7 @@ header {
 
 main {
   & .heroArea {
-    margin: 10px 0px 60px 0px;
+    margin: 60px 0px;
     justify-content: center;
     flex-wrap: wrap-reverse;
 
@@ -159,23 +164,24 @@ main {
   }
 
   & .customersArea {
-    & .customersBg {
-      height: 180px;
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 0px 20px;
+    padding: 32px 20px;
+    gap: 32px;
+    background-color: rgba(255, 255, 255, 0.1);
 
-      & .slider {
-        width: 100%;
-        height: 90px;
-        background-image: url("/customers.png");
-        animation: slider 10s infinite linear;
-      }
+    & .slider {
+      width: 100%;
+      height: 90px;
+      margin-bottom: 57px;
+      background-image: url("/customers.png");
+      animation: slider 10s infinite linear;
     }
   }
 
   & .servicesArea {
+    padding: 32px 20px;
+    gap: 32px;
+
     & .cardsCont {
-      padding: 0px 20px;
       flex-wrap: wrap;
       gap: 32px;
 
@@ -186,7 +192,6 @@ main {
         border: solid 1px black;
         border-radius: 20px;
         overflow: hidden;
-        /* box-shadow: 1px 1px 5px #4E5A62; */
         transition: scale 0.125s linear;
 
         & img {
@@ -208,76 +213,76 @@ main {
             line-height: 1.5;
           }
         }
-
-        &:hover {
-          scale: 1.05;
-        }
       }
     }
   }
 
-  & .contactArea form {
+  & .contactArea {
     padding: 32px 20px;
     gap: 32px;
     background-color: rgba(255, 255, 255, 0.1);
-    flex-wrap: wrap;
 
-    & input,
-    textarea,
-    select {
-      width: 100%;
-      height: 40px;
-      margin: 0 auto;
-      padding: 10px;
-      border: solid 1px black;
-      border-radius: 10px;
-      font-size: 18px;
-      font-family: "Ubuntu", sans-serif;
-      font-weight: 400;
-      font-style: normal;
+    & form {
+      gap: 32px;
+      flex-wrap: wrap;
 
-      &::placeholder {
-        color: #4E5A62;
+      & input,
+      textarea,
+      select {
+        width: 100%;
+        height: 40px;
+        margin: 0 auto;
+        padding: 10px;
+        border: solid 1px black;
+        border-radius: 10px;
+        font-size: 18px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        &::placeholder {
+          color: #4E5A62;
+        }
       }
-    }
 
-    & select {
-      color: #4E5A62;
-      appearance: none;
-      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
-      background-repeat: no-repeat;
-      background-position: right 11px top 50%;
-      background-size: 10px auto;
+      & select {
+        color: #4E5A62;
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+        background-repeat: no-repeat;
+        background-position: right 11px top 50%;
+        background-size: 10px auto;
 
-      &:hover {
+        &:hover {
+          cursor: pointer;
+        }
+
+        & option {
+          color: black;
+        }
+      }
+
+      & textarea {
+        height: 185px;
+        resize: none;
+      }
+
+      & span {
+        width: 100%;
+        font-size: 18px;
+        margin: 0 auto;
+      }
+
+      & input[type="submit"] {
+        background-color: #E63439;
+        color: white;
+        border: none;
         cursor: pointer;
       }
-
-      & option {
-        color: black;
-      }
-    }
-
-    & textarea {
-      height: 185px;
-      resize: none;
-    }
-
-    & span {
-      width: 100%;
-      font-size: 18px;
-      margin: 0 auto;
-    }
-
-    & input[type="submit"] {
-      background-color: #E63439;
-      color: white;
-      border: none;
-      cursor: pointer;
     }
   }
 
-  & .aboutArea .infoCont {
+  & .aboutArea {
     padding: 32px 20px;
     gap: 32px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -352,8 +357,7 @@ footer {
 @media only screen and (min-width: 768px) {
   main {
     & .heroArea {
-      margin: 32px 0px 64px 0px;
-      gap: 48px;
+      gap: 64px;
 
       & .cta {
         justify-content: center;
@@ -433,14 +437,11 @@ footer {
   }
 
   main {
-    & h2 {
-      padding-left: 100px;
-    }
-
     & .heroArea {
       height: 500px;
-      align-items: center;
       margin: 0px 0px 64px 0px;
+      gap: 192px;
+      align-items: center;
 
       & img {
         width: 350px;
@@ -448,16 +449,14 @@ footer {
     }
 
     & .customersArea {
-      & .customersBg {
-        padding: 0px 120px;
-      }
+      padding: 32px 120px;
     }
 
     & .servicesArea {
-      & .cardsCont {
-        padding: 0px 120px;
-        justify-content: space-between;
+      padding: 32px 120px;
 
+      & .cardsCont {
+        justify-content: space-between;
 
         & .card {
           width: 300px;
@@ -474,6 +473,10 @@ footer {
             padding: 30px;
             justify-content: center;
           }
+
+          &:hover {
+            scale: 1.05;
+          }
         }
 
         & article:nth-child(2) {
@@ -482,43 +485,125 @@ footer {
       }
     }
 
-    & .contactArea form {
+    & .contactArea {
       padding: 32px 120px;
 
-      & input,
-      select {
-        &[type="submit"] {
-          width: 200px;
-          margin: 0px;
+      & form {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 45px 45px 45px 135px 0px 0px 45px;
+
+        .grid1 {
+          width: 100%;
+          height: 100%;
+          grid-column: span 6 / span 6;
         }
 
-        &:not([type="submit"]) {
-          width: 48%;
-          height: 45px;
+        .grid2 {
+          width: 100%;
+          height: 100%;
+          grid-column: span 6 / span 6;
+          grid-column-start: 7;
+        }
+
+        .grid3 {
+          width: 100%;
+          height: 100%;
+          grid-column: span 6 / span 6;
+          grid-row-start: 2;
+        }
+
+        .grid4 {
+          width: 100%;
+          height: 100%;
+          grid-column: span 6 / span 6;
+          grid-column-start: 7;
+          grid-row-start: 2;
+        }
+
+        .grid5 {
+          width: 100%;
+          height: 100%;
+          grid-column: span 6 / span 6;
+          grid-row-start: 3;
+        }
+
+        .grid6 {
+          width: 100%;
+          height: 100%;
+          grid-column: span 6 / span 6;
+          grid-column-start: 7;
+          grid-row-start: 3;
+        }
+
+        .grid7 {
+          width: 100%;
+          height: 100%;
+          grid-column: span 12 / span 12;
+          grid-row: span 2 / span 2;
+          grid-row-start: 4;
+        }
+
+        .grid8 {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          grid-column: span 3 / span 3;
+          grid-row-start: 6;
+        }
+
+        .grid9 {
+          width: 100%;
+          height: 100%;
+          grid-column: span 3 / span 3;
+          grid-row-start: 7;
         }
       }
     }
 
     & .aboutArea {
-      & .infoCont {
-        padding: 32px 120px;
+      padding: 32px 120px;
 
-        .subCont {
-          justify-content: space-between;
+      .subCont {
+        justify-content: space-between;
 
-          & .navCont {
-            display: block;
-          }
+        & .navCont {
+          display: block;
+        }
 
-          & .groupCont {
-            gap: 80px;
-          }
+        & .groupCont {
+          gap: 80px;
+        }
 
-          & iframe {
-            width: 300px;
-          }
+        & iframe {
+          width: 300px;
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  header {
+    padding: 0px 320px;
+  }
+
+  main {
+    & .customersArea {
+      padding: 32px 320px;
+    }
+
+    & .servicesArea {
+      padding: 32px 320px;
+    }
+
+    & .contactArea {
+      padding: 32px 320px;
+    }
+
+    & .aboutArea {
+      padding: 32px 320px;
     }
   }
 }

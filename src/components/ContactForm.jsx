@@ -46,8 +46,8 @@ const ContactForm = () => {
 
   return (
     <form ref={form} className="dis-flex" onSubmit={dataToSend}>
-      <input type="text" name="fullname" placeholder="Nombre y Apellido *" maxLength={20} required />
-      <select className="service" name="service" defaultValue={"0"}
+      <input type="text" name="fullname" placeholder="Nombre y Apellido *" className="grid1" maxLength={20} required />
+      <select name="service" defaultValue={"0"} className="grid2"
         onChange={e => {
           if (e.target.value != 0) {
             e.target.style.color = "black"
@@ -59,13 +59,13 @@ const ContactForm = () => {
         <option value="Mantenimiento">Mantenimiento</option>
         <option value="Venta">Venta</option>
       </select>
-      <input type="text" name="city" placeholder="Localidad *" maxLength={20} required />
-      <input type="text" name="address" placeholder="Dirección *" maxLength={35} required />
-      <input type="tel" name="tel" placeholder="Teléfono *" maxLength={10} required />
-      <input type="email" name="mail" placeholder="E-mail *" pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}" maxLength={30} required />
-      <textarea name="message" placeholder="Mensaje" maxLength={150} />
-      <span className="ubuntu-light-italic">* Campos requeridos</span>
-      <input type="submit" value="Enviar" className="ubuntu-medium" />
+      <input type="text" name="city" placeholder="Localidad *" className="grid3" maxLength={20} required />
+      <input type="text" name="address" placeholder="Dirección *" className="grid4" maxLength={35} required />
+      <input type="tel" name="tel" placeholder="Teléfono *" className="grid5" maxLength={10} required />
+      <input type="email" name="mail" placeholder="E-mail *" pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}" className="grid6" maxLength={30} required />
+      <textarea className="grid7" name="message" placeholder="Mensaje" maxLength={150} />
+      <span className="grid8 ubuntu-light-italic">* Campos requeridos</span>
+      <input type="submit" value="Enviar" className="grid9 ubuntu-medium" />
     </form>
   )
 }
