@@ -8,14 +8,14 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="iconMenu" onClick={() => setOpenMenu(!openMenu)}>{openMenu ? <FaXmark /> : <FaBars />}</div>
-      <nav style={{ top: openMenu ? '60px' : '-100vh', transition: 'top 0.5s linear' }}>
+      <div onClick={() => setOpenMenu(!openMenu)}>{openMenu ? <FaXmark /> : <FaBars />}</div>
+      <nav style={{ right: openMenu ? '0px' : '-155px' }}>
         <ul className="dis-flex ubuntu-regular">
           <li><a href={"#inicio"} onClick={() => setOpenMenu(false)}>Inicio</a></li>
           <li><a href={"#clientes"} onClick={() => setOpenMenu(false)}>Clientes</a></li>
           <li><a href={"#servicios"} onClick={() => setOpenMenu(false)}>Servicios</a></li>
           <li><a href={"#contacto"} onClick={() => setOpenMenu(false)}>Contacto</a></li>
-          <li><a href={"#sobre"} onClick={() => setOpenMenu(false)}>Sobre Nosotros</a></li>
+          <li><a href={"#nosotros"} onClick={() => setOpenMenu(false)}>Sobre Nosotros</a></li>
         </ul>
       </nav>
     </>

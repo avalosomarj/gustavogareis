@@ -12,8 +12,8 @@ const mailerService = async (content) => {
   })
 
   const mail = {
-    from: `${process.env.NODEMAILER_MAILTEMPLATE_FROM} <${process.env.NODEMAILER_AUTH_USER}>`,
-    to: process.env.NODEMAILER_AUTH_USER,
+    from: `${process.env.NODEMAILER_NAMETOSHOW} <${process.env.NODEMAILER_AUTH_USER}>`,
+    to: process.env.CONTACT_TEC_MAIL,
     subject: `${content.fullname} - ${content.city} - ${content.service}`,
     text:
       `Nuevo mensaje desde formulario web

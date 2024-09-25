@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <header className="dis-flex ali-cen">
-        <a href={"#inicio"}><img src="gg-logo.png" alt="logo" /></a>
+        <a href={"#inicio"}><img src="isotipo.png" alt="isotipo" /></a>
         <NavBar />
       </header>
 
@@ -23,7 +23,7 @@ export default function Home() {
 
         <section className="customersArea dis-flex flex-dir-col" id="clientes">
           <h2 className="ubuntu-regular">Confían en nosotros</h2>
-          <div className="slider" />
+          <div className="slider" style={{ backgroundImage: `url(${process.env.IMG_SLIDER_URL})`, "--width-img": process.env.IMG_SLIDER_CSS }} />
         </section>
 
         <section className="servicesArea dis-flex flex-dir-col" id="servicios">
@@ -70,10 +70,10 @@ export default function Home() {
           <ContactForm />
         </section>
 
-        <section className="aboutArea dis-flex flex-dir-col" id="sobre">
-          <h2 className="ubuntu-regular">Sobre nosotros</h2>
+        <section className="aboutArea dis-flex flex-dir-col" id="nosotros">
+          <img src="/logotipo.png" alt="logotipo" />
           <p className="ubuntu-light">
-            Desde 2017 nos dedicamos a la venta e instalación de seguridad electrónica
+            Nos dedicamos a la venta e instalación de seguridad electrónica en la provincia de Entre Ríos desde el año 2017
           </p>
 
           <div className="subCont dis-flex">
@@ -91,16 +91,16 @@ export default function Home() {
               <div className="separador dis-flex flex-dir-col">
                 <h4 className="ubuntu-regular">Área Técnica</h4>
                 <div className="iconsCont dis-flex">
-                  <a href={"https://wa.me/" + process.env.CONTACT_TEC_WSP} target="_blank"><FaSquareWhatsapp /></a>
+                  <a href={`https://wa.me/${process.env.CONTACT_TEC_WSP}/?text=Hola,%20me%20contacto%20desde%20gustavogareis.com.ar`} target="_blank"><FaSquareWhatsapp /></a>
                   <a href={"tel:" + process.env.CONTACT_TEC_TEL} target="_blank"><FaSquarePhone /></a>
                   <a href={"mailto:" + process.env.CONTACT_TEC_MAIL} target="_blank"><FaSquareEnvelope /></a>
                 </div>
               </div>
 
-              <div className="separador dis-flex flex-dir-col">
+              <div className="separador dis-flex flex-dir-col areacom">
                 <h4 className="ubuntu-regular">Área Comercial</h4>
                 <div className="iconsCont dis-flex">
-                  <a href={"https://wa.me/" + process.env.CONTACT_COM_WSP} target="_blank"><FaSquareWhatsapp /></a>
+                  <a href={`https://wa.me/${process.env.CONTACT_COM_WSP}/?text=Hola,%20me%20contacto%20desde%20gustavogareis.com.ar`} target="_blank"><FaSquareWhatsapp /></a>
                   <a href={"tel:" + process.env.CONTACT_COM_TEL} target="_blank"><FaSquarePhone /></a>
                   <a href={"mailto:" + process.env.CONTACT_COM_MAIL} target="_blank"><FaSquareEnvelope /></a>
                 </div>
@@ -119,7 +119,6 @@ export default function Home() {
       </main >
 
       <footer className="dis-flex ali-cen">
-
         <p className="ubuntu-light">Diseño y Desarrollo por <a href={process.env.ERGONOMIC_URL} target="_blank"><span className="ff-orb">Ergonomic</span></a></p>
       </footer>
     </>

@@ -6,9 +6,9 @@ export async function POST(request) {
   const response = await mailerService(data)
 
   if (response == 500) {
-    return NextResponse.json({ status: 500, message: "Hubo un problema al enviar tu consulta, intentá nuevamente!" })
+    return NextResponse.json({ status: 500, message: "El servicio no se encuentra funcionando, intente más tarde. Disculpe las molestias" })
   }
   else {
-    return NextResponse.json({ status: 200, message: "Tu consulta fue enviada correctamente!" })
+    return NextResponse.json({ status: 200, message: "Gracias por tu consulta! En breve te contactaremos" })
   }
 }

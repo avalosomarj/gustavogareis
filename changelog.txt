@@ -1,3 +1,8 @@
+v 1.2.5
+        + modal con respuestas del formulario
+        + transiciones y animaciones CSS
+        + correcciones varias HTML, CSS y JS
+
 v 1.1.9
         + media query para 1920px
         + correcciones varias HTML y CSS
