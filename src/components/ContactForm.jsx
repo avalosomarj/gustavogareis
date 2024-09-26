@@ -15,6 +15,8 @@ const ContactForm = () => {
       setModalMessage("No seleccionaste el servicio por el cual consultás")
     }
     else {
+      form.current.btnSubmit.disabled = true
+
       const formData = {
         fullname: form.current.fullname.value,
         service: form.current.service.value,
@@ -53,7 +55,7 @@ const ContactForm = () => {
       <form ref={form} className="dis-flex" onSubmit={dataToSend} style={{ filter: `blur(${modalMessage != null ? '5px' : '0px'})` }}>
         <input type="text" name="fullname" placeholder="Nombre y Apellido *" className="grid1" maxLength={50} required />
         <select name="service" defaultValue={"0"} className="grid2"
-          onChange={e => {
+          onChange={(e) => {
             if (e.target.value != 0) {
               e.target.style.color = "black"
               e.target.style.border = "none"
@@ -69,14 +71,19 @@ const ContactForm = () => {
         <input type="text" name="address" placeholder="Dirección *" className="grid4" maxLength={50} required />
         <input type="tel" name="tel" placeholder="Teléfono (sin 0 ni 15) *" className="grid5" maxLength={10} required />
         <input type="email" name="mail" placeholder="E-mail *" pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}" className="grid6" maxLength={50} required />
-        <textarea className="grid7" name="message" placeholder="Mensaje" maxLength={300} />
+        <textarea name="message" placeholder="Mensaje" className="grid7" maxLength={300} />
         <span className="grid8 ubuntu-light-italic">* Campos requeridos</span>
-        <button type="submit" className="grid9"><span className="ubuntu-medium">Enviar</span></button>
+        <button type="submit" name="btnSubmit" className="grid9"><span className="ubuntu-medium">Enviar</span></button>
       </form>
       <div className="modalBg ali-cen jus-cen" style={{ display: modalMessage == null ? 'none' : 'flex' }}>
         <div className="modalContent dis-flex flex-dir-col jus-cen">
           <span className="ubuntu-medium">{modalMessage}</span>
-          <button onClick={() => setModalMessage(null)} id="btnClose"><span className="ubuntu-medium">Cerrar</span></button>
+          <button onClick={() => {
+            setModalMessage(null)
+            form.current.btnSubmit.disabled = false
+          }}>
+            <span className="ubuntu-medium">Cerrar</span>
+          </button>
         </div>
       </div>
     </>

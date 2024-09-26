@@ -12,13 +12,13 @@ export default function Home() {
 
       <main>
         <section className="heroArea dis-flex">
-          <div className="cta dis-flex">
+          <div className="cta dis-flex" style={{ "--offset": '-50%' }}>
             <h1 className="ubuntu-medium">Brindamos soluciones<br />en seguridad electrónica<br />para tu empresa, comercio<br />u oficina</h1>
             <button className="dis-flex jus-cen ali-cen ubuntu-medium">
               <a href={"#contacto"}><span>Contactanos</span></a>
             </button>
           </div>
-          <img src="hero.png" alt="hero" />
+          <img src="hero.png" alt="hero" style={{ "--offset": '50%' }} />
         </section>
 
         <section className="customersArea dis-flex flex-dir-col" id="clientes">

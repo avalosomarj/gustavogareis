@@ -142,6 +142,8 @@ main {
       width: 300px;
       flex-direction: column;
       gap: 16px;
+      animation: fadeIn 1s linear,
+        translateX 1s linear;
 
       & h1,
       span {
@@ -170,6 +172,8 @@ main {
 
     & img {
       width: 300px;
+      animation: fadeIn 1s linear,
+        translateX 1s linear;
     }
   }
 
@@ -201,10 +205,13 @@ main {
         border: solid 1px black;
         border-radius: 20px;
         overflow: hidden;
-        transition: scale 0.125s linear;
+        animation: fadeIn linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 50%;
 
         & img {
-          width: 100%
+          width: 100%;
+          transition: scale 0.25s linear;
         }
 
         & .infoCard {
@@ -220,6 +227,12 @@ main {
           & p {
             font-size: 21px;
             line-height: 1.5;
+          }
+        }
+
+        &:hover {
+          & img {
+            scale: 1.05;
           }
         }
       }
@@ -298,6 +311,12 @@ main {
 
         &:hover {
           background-color: darkred;
+        }
+
+        &:disabled {
+          background-color: #4E5A62;
+          color: darkgray;
+          cursor: wait;
         }
       }
     }
@@ -404,6 +423,42 @@ main {
       height: 300px;
     }
   }
+
+  & .notFound {
+    height: 100vh;
+    gap: 24px;
+
+    & div {
+      gap: 16px;
+
+      & .isotipo {
+        width: 80px;
+      }
+
+      & .logotipo {
+        width: 150px;
+      }
+    }
+
+    & span {
+      font-size: 21px;
+      color: white;
+    }
+
+    & button {
+      width: 96px;
+      height: 48px;
+      background-color: #E63439;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.125s linear;
+
+      &:hover {
+        background-color: darkred;
+      }
+    }
+  }
 }
 
 footer {
@@ -421,6 +476,26 @@ footer {
 @keyframes slider {
   to {
     background-position: var(--width-img);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes translateX {
+  from {
+    transform: translateX(var(--offset));
+  }
+
+  to {
+    transform: translateX(0%);
   }
 }
 
@@ -561,10 +636,6 @@ footer {
             height: 225px;
             padding: 30px;
             justify-content: center;
-          }
-
-          &:hover {
-            scale: 1.05;
           }
         }
 
