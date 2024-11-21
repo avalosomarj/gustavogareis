@@ -1,3 +1,5 @@
+'use server'
+
 import nodemailer from "nodemailer"
 
 const mailerService = async (content) => {
@@ -11,7 +13,7 @@ const mailerService = async (content) => {
     }
   })
 
-  const mail = {
+  const mailTemplate = {
     from: `${process.env.NODEMAILER_NAMETOSHOW} <${process.env.NODEMAILER_AUTH_USER}>`,
     to: process.env.CONTACT_TEC_MAIL,
     subject: `${content.fullname} - ${content.city} - ${content.service}`,
@@ -53,7 +55,7 @@ const mailerService = async (content) => {
   }
 
   try {
-    const data = await transporter.sendMail(mail)
+    const data = await transporter.sendMail(mailTemplate)
     if (data.messageId) {
       return 200
     }

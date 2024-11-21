@@ -1,28 +1,36 @@
+v 1.5.9
+        + componente ServiceCard, instalación de dependencias "html-react-parser" y "react-intersection-observer"
+        + archivo data.js que contiene información de los servicios
+        - se eliminó la API REST del servicio webmailer ya que no será accedido desde entorno externo
+        * correcciones varias HTML, CSS y JS
+        * se cambió la imagen de la card del servicio venta
+        * debido a que no retorna HTML, se cambió el nombre al archivo mailerService.jsx por mailerService.js
+
 v 1.3.6
         + página not found
-        + correcciones varias HTML y CSS
+        * correcciones varias HTML y CSS
 
 v 1.2.5
         + modal con respuestas del formulario
         + transiciones y animaciones CSS
-        + correcciones varias HTML, CSS y JS
+        * correcciones varias HTML, CSS y JS
 
 v 1.1.9
         + media query para 1920px
-        + correcciones varias HTML y CSS
+        * correcciones varias HTML y CSS
 
 v 1.1.8
         + variables de entorno para el contenido dinámico
-        + formulario de contacto (validaciones lado cliente, api para envío de datos con nodemailer desde servidor)
+        + formulario de contacto (validaciones lado cliente, API para envío de datos con Nodemailer desde servidor)
 
 v 1.0.7
         + título y favicon
-        + navegación
-        + animación logos clientes
+        + menú de navegación
+        + animación banner logos clientes
 
 v 1.0.4
-        + vista mobile+
-        + vista desktop
+        + CSS vista mobile+
+        + CSS vista desktop
 
 v 1.0.0
         ~ version inicial vista mobile

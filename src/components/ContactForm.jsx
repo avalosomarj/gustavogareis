@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef, useState } from "react"
+import mailerService from '@/services/mailerService'
 
 const ContactForm = () => {
   const form = useRef()
@@ -28,19 +29,14 @@ const ContactForm = () => {
       }
 
       try {
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData)
-        })
-          .then(res => res.json())
+        const response = await mailerService(formData)
 
-        if (response.status == 200) {
-          setModalMessage(response.message)
+        if (response == 200) {
+          setModalMessage("Tu consulta se envió correctamente! En breve te responderemos.")
           form.current.service.style.color = "#4E5A62"
           e.target.reset()
         } else {
-          setModalMessage(response.message)
+          setModalMessage("El envío falló, intente nuevamente y si el problema persiste, intente más tarde. Disculpe las molestias.")
         }
       }
       catch (error) {
@@ -72,8 +68,7 @@ const ContactForm = () => {
         <input type="tel" name="tel" placeholder="Teléfono (sin 0 ni 15) *" className="grid5" maxLength={10} required />
         <input type="email" name="mail" placeholder="E-mail *" pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}" className="grid6" maxLength={50} required />
         <textarea name="message" placeholder="Mensaje" className="grid7" maxLength={300} />
-        <span className="grid8 ubuntu-light-italic">* Campos requeridos</span>
-        <button type="submit" name="btnSubmit" className="grid9"><span className="ubuntu-medium">Enviar</span></button>
+        <button type="submit" name="btnSubmit" className="grid8"><span className="ubuntu-medium">Enviar</span></button>
       </form>
       <div className="modalBg ali-cen jus-cen" style={{ display: modalMessage == null ? 'none' : 'flex' }}>
         <div className="modalContent dis-flex flex-dir-col jus-cen">
