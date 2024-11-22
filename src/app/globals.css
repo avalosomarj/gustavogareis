@@ -40,29 +40,17 @@
   font-style: normal;
 }
 
-.ubuntu-light-italic {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.ubuntu-medium-italic {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
 .ff-orb {
   font-family: "Orbitron", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-.ff-white{
+.tc-white {
   color: white;
 }
 
-.ff-red{
+.tc-red {
   color: #E63439;
 }
 
@@ -74,7 +62,7 @@ html,
 body {
   max-width: 100vw;
   scroll-behavior: smooth;
-  background-color: rgba(78, 90, 98, 0.35);
+  background: linear-gradient(0deg, rgba(148, 148, 155, 0.35) 0%, rgba(78, 90, 98, 0.35) 100%);
 
   & svg {
     width: 25px;
@@ -93,7 +81,7 @@ body {
 
   & h2 {
     font-size: 24px;
-    
+
     & span {
       border-left: 5px solid #E63439;
       margin-right: 8px;
@@ -149,8 +137,12 @@ header {
 }
 
 main {
+  & section {
+    scroll-margin-top: 60px;
+  }
+
   & .heroArea {
-    margin: 60px 0px;
+    margin: 40px 0px 120px 0px;
     justify-content: center;
     flex-wrap: wrap-reverse;
 
@@ -174,7 +166,7 @@ main {
         border-radius: 10px;
         border: none;
         cursor: pointer;
-        animation: changeColor 1.5s ease-in-out 3s alternate infinite;
+        animation: changeColor 1s ease-in 1.25s alternate infinite;
 
         & span {
           color: white;
@@ -201,8 +193,9 @@ main {
       filter: grayscale(100);
       transition: filter 0.5s ease-in-out;
 
-      &:hover{
+      &:hover {
         filter: grayscale(0);
+        animation-play-state: paused;
       }
     }
   }
@@ -260,6 +253,10 @@ main {
     background-color: rgba(255, 255, 255, 0.1);
     margin-bottom: 32px;
     position: relative;
+
+    & p {
+      font-size: 18px;
+    }
 
     & form {
       gap: 32px;
@@ -382,18 +379,19 @@ main {
       color: white;
     }
 
-    & a,
-    svg {
-      transition: color 0.125s linear;
-
-      &:hover {
-        color: rgb(145, 164, 170);
-      }
-    }
-
     & .subCont {
       gap: 32px;
       flex-wrap: wrap;
+
+      & a,
+      svg {
+        color: rgb(145, 164, 170);
+        transition: color 0.125s linear;
+
+        &:hover {
+          color: white;
+        }
+      }
 
       & .navCont {
         display: none;
@@ -417,13 +415,14 @@ main {
       & .separador {
         gap: 14px;
 
+        & a {
+          width: 25px;
+          height: 25px;
+        }
+
         & .iconsCont {
           gap: 18px;
         }
-      }
-
-      & .areacom {
-        display: none;
       }
     }
 
@@ -472,14 +471,16 @@ main {
 }
 
 footer {
-  height: 60px;
-  padding: 0px 20px;
+  padding: 24px;
   background-color: rgba(22, 39, 55, 1);
 
   & p {
-    width: 100%;
-    text-align: end;
+    text-align: center;
     color: white;
+
+    & a {
+      width: 265px;
+    }
   }
 }
 
@@ -621,6 +622,10 @@ footer {
   }
 
   main {
+    & section {
+      scroll-margin-top: 0px;
+    }
+
     & .heroArea {
       height: 500px;
       margin: 0px 0px 64px 0px;

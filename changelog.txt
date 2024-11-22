@@ -1,3 +1,7 @@
+v 1.6.1
+        * correcciones varias HTML y CSS
+        + agregado README.md
+
 v 1.5.9
         + componente ServiceCard, instalación de dependencias "html-react-parser" y "react-intersection-observer"
         + archivo data.js que contiene información de los servicios

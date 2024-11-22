@@ -44,14 +44,14 @@ export default function Home() {
 
         <section className="contactArea dis-flex flex-dir-col" id="contacto">
           <h2 className="ubuntu-regular"><span />Contactanos</h2>
-          <p className="ubuntu-light-italic info-brand">Completá el formulario con tus datos para que podamos responderte. Tené en cuenta que los campos marcados con <span className="ubuntu-medium-italic">*</span> son obligatorios</p>
+          <p className="ubuntu-regular">Completá el formulario con tus datos para que podamos responderte. Tené en cuenta que los campos marcados con <span className="ubuntu-medium">*</span> son obligatorios</p>
           <ContactForm />
         </section>
 
         <section className="aboutArea dis-flex flex-dir-col" id="nosotros">
-          <h2 className="ubuntu-regular ff-white"><span />Sobre Nosotros</h2>
+          <h2 className="ubuntu-regular tc-white"><span />Sobre Nosotros</h2>
           <p className="ubuntu-light">
-            Somos una empresa dedicada a la seguridad electrónica en la provincia de Entre Ríos. Además somos distribuidor de productos oficiales <span className="ubuntu-medium-italic ff-red">HIK</span><span className="ubuntu-medium-italic">VISION</span>.
+            Somos una empresa dedicada a la seguridad electrónica en la provincia de Entre Ríos. Además somos distribuidor de productos oficiales <a href={"https://www.hikvision.com/es-la/"} target="_blank"><span className="ubuntu-medium tc-red">HIK</span><span className="ubuntu-medium">VISION</span></a>
           </p>
 
           <div className="subCont dis-flex">
@@ -75,14 +75,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="separador dis-flex flex-dir-col areacom">
+              {/* <div className="separador dis-flex flex-dir-col">
                 <h4 className="ubuntu-regular">Área Comercial</h4>
                 <div className="iconsCont dis-flex">
                   <a href={`https://wa.me/${process.env.CONTACT_COM_WSP}/?text=Hola,%20me%20contacto%20desde%20gustavogareis.com.ar`} target="_blank"><FaSquareWhatsapp /></a>
                   <a href={"tel:" + process.env.CONTACT_COM_TEL} target="_blank"><FaSquarePhone /></a>
                   <a href={"mailto:" + process.env.CONTACT_COM_MAIL} target="_blank"><FaSquareEnvelope /></a>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="separador dis-flex flex-dir-col">
@@ -94,12 +94,12 @@ export default function Home() {
             </iframe>
           </div>
 
-          <span className="ubuntu-light ff-white info-brand">gustavogareis.com.ar | 2017 - 2024</span>
+          <span className="ubuntu-light tc-white info-brand">gustavogareis.com.ar | 2017 - 2024</span>
         </section >
       </main >
 
-      <footer className="dis-flex flex-dir-col">
-        <p className="ubuntu-light">Diseño y Desarrollo por <a href={process.env.ERGONOMIC_URL} target="_blank"><span className="ff-orb">Ergonomic</span></a></p>
+      <footer>
+        <p className="ubuntu-light"><a href={process.env.ERGONOMIC_URL} target="_blank">Diseño y Desarrollo por <span className="ff-orb">Ergonomic</span></a></p>
       </footer>
     </>
   );

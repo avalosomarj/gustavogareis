@@ -18,6 +18,6 @@ export const servicesDesc = [
       title: 'Venta',
       img: 's3.jpg',
       altimg: 'venta',
-      desc: 'Como distribuidor oficial <span className="ubuntu-medium-italic ff-red">HIK</span><span className="ubuntu-medium-italic">VISION</span>, resolvemos tus consultas sobre reventa de equipos'
+      desc: 'Somos punto oficial de distribución <span className="ubuntu-medium tc-red">HIK</span><span className="ubuntu-medium">VISION</span> y resolvemos tus consultas sobre reventa de equipos'
   }
 ]
