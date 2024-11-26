@@ -67,7 +67,7 @@ const ContactForm = () => {
         <input type="text" name="address" placeholder="Dirección *" className="grid4" maxLength={50} required />
         <input type="tel" name="tel" placeholder="Teléfono (sin 0 ni 15) *" className="grid5" maxLength={10} required />
         <input type="email" name="mail" placeholder="E-mail *" pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}" className="grid6" maxLength={50} required />
-        <textarea name="message" placeholder="Mensaje" className="grid7" maxLength={300} />
+        <textarea name="message" placeholder="Mensaje (opcional)" className="grid7" maxLength={300} />
         <button type="submit" name="btnSubmit" className="grid8"><span className="ubuntu-medium">Enviar</span></button>
       </form>
       <div className="modalBg ali-cen jus-cen" style={{ display: modalMessage == null ? 'none' : 'flex' }}>

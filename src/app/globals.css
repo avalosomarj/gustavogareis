@@ -116,10 +116,9 @@ header {
     transition: right 0.5s ease;
 
     & ul {
-      padding: 20px;
+      padding: 32px;
       background-color: #4E5A62;
       flex-direction: column;
-      align-items: center;
       gap: 32px;
 
       & li {
@@ -127,8 +126,9 @@ header {
 
         & a {
           display: block;
+          width: 128px;
+          font-size: 18px;
           text-align: end;
-          width: 115px;
           color: white;
         }
       }
@@ -183,6 +183,7 @@ main {
 
   & .customersArea {
     padding: 32px 20px;
+    margin-bottom: 64px;
     gap: 32px;
     background-color: rgba(255, 255, 255, 0.1);
 
@@ -202,11 +203,12 @@ main {
 
   & .servicesArea {
     padding: 32px 20px;
+    margin-bottom: 64px;
     gap: 32px;
 
     & .cardsCont {
       flex-wrap: wrap;
-      gap: 32px;
+      gap: 48px;
 
       & .card {
         width: 370px;
@@ -249,13 +251,14 @@ main {
 
   & .contactArea {
     padding: 32px 20px;
+    margin-bottom: 64px;
     gap: 32px;
     background-color: rgba(255, 255, 255, 0.1);
-    margin-bottom: 32px;
     position: relative;
 
     & p {
       font-size: 18px;
+      line-height: 1.5;
     }
 
     & form {
@@ -302,12 +305,6 @@ main {
       & textarea {
         height: 185px;
         resize: none;
-      }
-
-      & span {
-        width: 100%;
-        font-size: 18px;
-        margin: 0 auto;
       }
 
       & button {
@@ -376,6 +373,7 @@ main {
     & p,
     h4 {
       font-size: 21px;
+      line-height: 1.5;
       color: white;
     }
 
@@ -628,7 +626,7 @@ footer {
 
     & .heroArea {
       height: 500px;
-      margin: 0px 0px 64px 0px;
+      margin-bottom: 64px;
       gap: 192px;
       align-items: center;
 
@@ -672,6 +670,7 @@ footer {
 
     & .contactArea {
       padding: 32px 120px;
+      margin-bottom: 88px;
 
       & form {
         display: grid;

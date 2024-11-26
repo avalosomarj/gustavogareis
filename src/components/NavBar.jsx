@@ -9,7 +9,7 @@ const NavBar = () => {
   return (
     <>
       <div onClick={() => setOpenMenu(!openMenu)}>{openMenu ? <FaXmark /> : <FaBars />}</div>
-      <nav style={{ right: openMenu ? '0px' : '-155px' }}>
+      <nav style={{ right: openMenu ? '0px' : '-192px' }}>
         <ul className="dis-flex ubuntu-regular">
           <li><a href={"#inicio"} onClick={() => setOpenMenu(false)}>Inicio</a></li>
           <li><a href={"#clientes"} onClick={() => setOpenMenu(false)}>Clientes</a></li>
