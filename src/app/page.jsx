@@ -51,7 +51,7 @@ export default function Home() {
         <section className="aboutArea dis-flex flex-dir-col" id="nosotros">
           <h2 className="ubuntu-regular tc-white"><span />Sobre Nosotros</h2>
           <p className="ubuntu-light">
-            Somos una empresa dedicada a la seguridad electrónica en la provincia de Entre Ríos. Además somos distribuidor de productos oficiales <a href={"https://www.hikvision.com/es-la/"} target="_blank"><span className="ubuntu-medium tc-red">HIK</span><span className="ubuntu-medium">VISION</span></a>
+            Somos una empresa dedicada a brindar servicio y soporte técnico a empresas y oficinas. También realizamos cableados estructurados para redes e instalación de sistemas de videovigilancia. Además somos distribuidor de productos oficiales <a href={"https://www.hikvision.com/es-la/"} target="_blank"><span className="ubuntu-medium tc-red">HIK</span><span className="ubuntu-medium">VISION</span></a>
           </p>
 
           <div className="subCont dis-flex">
@@ -94,7 +94,7 @@ export default function Home() {
             </iframe>
           </div>
 
-          <span className="ubuntu-light tc-white info-brand">gustavogareis.com.ar | 2017 - 2024</span>
+          <span className="ubuntu-light tc-white info-brand">gustavogareis.com.ar | 2017 - {process.env.CURRENT_YEAR}</span>
         </section >
       </main >
 

@@ -1,6 +1,6 @@
 ## Proyecto Web Freelance
 
-Proyecto realizado como colaborador de la agencia Ergonomic
+Proyecto realizado como colaborador de la agencia Ergonomic:
 Landing Page diseñada y desarrollada para _Gustavo Gareis_, un profesional en el área de seguridad electrónica que buscaba expandir el alcance de sus servicios mediante la web.
 
 ## Información Técnica I
